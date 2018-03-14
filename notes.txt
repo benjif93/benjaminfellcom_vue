@@ -1,0 +1,14 @@
+// Creating benjaminfell.com as a Vue sites
+
+1 - Page site with blogging capabilties
+2 - Create all of the components
+    - Main headline
+    - Employment
+    - Skills
+    - Contact
+    - Footer
+3 - Create the navigation bar
+
+5 - Look into storing state with vuex
+
+4 - Create the bloggin component
