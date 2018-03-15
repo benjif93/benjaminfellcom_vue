@@ -1,16 +1,18 @@
 <template>
-    <div id="employment">
-        <h2>{{ section_title }}</h2>
-        <div class="employment-list">
-            <div v-for="(employer, index) in employment_items" :key="index">
-                <div class="employment-list__info">
-                    <div class="employment-list__location"><h3>{{ employer.organisation_name }}</h3>, <h4>{{ employer.organistion_base }}</h4></div>
-                    <div class="employment-list__date"><time>{{ employer.date_from }}</time> - <time>{{ employer.date_to }}</time></div>
-                    <div class="employment-list__role">{{ employer.role }}</div>
-                </div>
-                <div id="employment-list__duties-and-achivements">
-                    <h3>{{ section_subtitle }}</h3>
-                    <div v-html="employer.duties_and_achivements"></div>
+    <div id="Employment" class="homepage__employment bg-secondary">
+        <div class="holder">
+            <h2 class="txt-white">{{ section_title }}</h2>
+            <div class="employment-list">
+                <div v-for="(employer, index) in employment_items" :key="index" class="employment-list__card">
+                    <div class="employment-list__info">
+                        <div class="employment-list__location"><h3>{{ employer.organisation_name }}</h3>, <p>{{ employer.organistion_base }}</p></div>
+                        <div class="employment-list__date"><time>{{ employer.date_from | dateFormat }}</time> - <time>{{ employer.date_to | dateFormat }}</time></div>
+                        <div class="employment-list__role">{{ employer.role }}</div>
+                    </div>
+                    <div id="employment-list__duties-and-achivements">
+                        <h4>{{ section_subtitle }}</h4>
+                        <div v-html="employer.duties_and_achivements"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,7 +27,7 @@
         data() {
             return {
                 section_title: 'Employment',
-                section_subtitle: 'Dates and Achivements',
+                section_subtitle: 'Duties and Achivements',
                 employment_items: []
             }
         },
@@ -40,6 +42,57 @@
         },
         created() {
             this.getEmployment();
+        },
+        filters: {
+            dateFormat: function (value) {
+                var date = new Date(value),
+                    locale = 'en-gb',
+                    month  = date.toLocaleString(locale, {month: "long"}),
+                    year   = date.getFullYear()
+                return month + ' ' + year; 
+            }
         }
     }
 </script>
+
+<style lang="scss" scoped>
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .holder {
+        float: right;
+        padding-right: 2%;
+        padding-left: 9.5vw;
+    }
+
+    .employment-list {
+        &__card {
+            padding: 17.5px;
+            margin: 5px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        &__location {
+            > * {
+                display: inline-block;
+                font-size: 22px;
+            }
+        }
+
+        &__date {
+            margin-bottom: 10px;
+        }
+
+        &__role {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+    }
+</style>

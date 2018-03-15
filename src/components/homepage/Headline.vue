@@ -1,9 +1,12 @@
 <template>
-  <div class="homepage-headline">
-      <h2>{{ headline_content }}</h2>
+  <div id="Headline" class="homepage__headline bg-primary txt-white">
+      <div class="container">
+        <div class="row">
+            <h2 class="center-elem">{{ headline_content }}</h2>
+        </div>
+      </div>
   </div>
 </template>
-
 
 <script>
     import { butter } from '@/buttercms'
@@ -28,3 +31,12 @@
         }
     }
 </script>
+
+<style scoped>
+    h2 {
+        width: 80vw;
+        padding: 80px 0;
+        font-size: calc(.8em + (2vw));
+        line-height: 1.43;
+    }
+</style>

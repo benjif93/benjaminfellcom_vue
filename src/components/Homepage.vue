@@ -1,11 +1,16 @@
 <template>
-  <div id="Homepage">
+  <div id="Homepage" class="app-homepage">
     <homepage-headline></homepage-headline>
-    <homepage-employment></homepage-employment>
-    <homepage-skills></homepage-skills>
+    <div class="container">
+        <div class="row">
+            <div class="employment-and-skills flex ">
+                <homepage-employment></homepage-employment>
+                <homepage-skills></homepage-skills>
+            </div>
+        </div>
+    </div>
   </div>
 </template>
-
 
 <script>
     import HomepageHeadline from '@/components/homepage/Headline'
@@ -20,3 +25,29 @@
         }
     }
 </script>
+
+<style lang="scss">
+    
+    .homepage {
+        $self: &;
+
+        &__employment,
+        &__skills {
+            padding: 20px 0;
+
+            h2 {
+                margin: 0 0 20px;
+                font-size: 28px;
+            }
+        }
+
+        &__employment {
+            flex-basis: 60%;
+        }
+
+        &__skills {
+            flex-basis: 40%;
+        }
+    }
+
+</style>
