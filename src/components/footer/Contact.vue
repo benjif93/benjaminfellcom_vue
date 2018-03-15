@@ -45,7 +45,7 @@
 <style lang="scss" scoped>
 
     h2 {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         font-size: 26px;
         font-weight: 600;
     }

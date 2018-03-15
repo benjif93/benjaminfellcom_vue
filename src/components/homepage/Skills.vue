@@ -49,6 +49,7 @@
             margin: 0 5px 10px;
             background: #ffffff;
             color: #00171F;
+            font-family: "Roboto";
             font-size: 16px;
             text-align: center;
             border-radius: 20px;

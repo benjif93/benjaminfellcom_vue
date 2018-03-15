@@ -29,8 +29,17 @@ export default {
   $f_color: #007EA7;
   $g_color: #003459;
 
+  .sr-only {
+    visibility: hidden;
+    display: none;
+  }
+
   body {
     font-family: 'Open Sans';
+  }
+
+  a {
+    color: $c_color;
   }
 
   h1,
