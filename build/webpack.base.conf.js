@@ -4,11 +4,12 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+// Custom plugins
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin")
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
-
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -78,5 +79,13 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    new GoogleFontsPlugin({
+        fonts: [
+            { family: "Open Sans", variants: [ "400", "600", "700" ] },
+            { family: "Roboto", variants: [ "400", "500" ] }
+        ]
+    })
+  ]
 }

@@ -29,6 +29,18 @@ export default {
   $f_color: #007EA7;
   $g_color: #003459;
 
+  body {
+    font-family: 'Open Sans';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Roboto";
+  }
+
   // Text
   .txt-white {
     color: $a_color
@@ -106,7 +118,8 @@ export default {
     list-style-type: initial;
 
     li {
-
+      margin-bottom: 4px;
+      font-size: 14px;
     }
   }
 

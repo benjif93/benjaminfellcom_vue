@@ -58,8 +58,8 @@
 
     @media (min-width: 768px) {
         .holder {
-            padding-right: 9.5vw;
-            padding-left: 2%;
+            padding-right: 5vw;
+            padding-left: 3%;
         }
     }
 </style>

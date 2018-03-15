@@ -69,7 +69,7 @@
 
     @media (min-width: 768px) {
         .holder {
-            width: 80vw;
+            width: 90vw;
             padding: 20px 0;
         }
     }

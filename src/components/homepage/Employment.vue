@@ -9,7 +9,7 @@
                         <div class="employment-list__date"><time>{{ employer.date_from | dateFormat }}</time> - <time>{{ employer.date_to | dateFormat }}</time></div>
                         <div class="employment-list__role">{{ employer.role }}</div>
                     </div>
-                    <div id="employment-list__duties-and-achivements">
+                    <div class="employment-list__duties-and-achivements">
                         <h4>{{ section_subtitle }}</h4>
                         <div v-html="employer.duties_and_achivements"></div>
                     </div>
@@ -62,15 +62,22 @@
         margin-bottom: 10px;
     }
 
+    ul {
+        li {
+            font-size: 14px;
+        }
+    }
+
     .holder {
         padding-right: 3.5%;
         padding-left: 3.5%;
     }
 
     .employment-list {
+
         &__card {
             padding: 17.5px;
-            margin: 5px 5px 10px;
+            margin: 5px 0 10px;
             background: #ffffff;
             border-radius: 5px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -86,11 +93,14 @@
 
         &__date {
             margin-bottom: 10px;
+            font-size: 12px;         
         }
 
         &__role {
             padding-bottom: 10px;
             margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.43;
             border-bottom: 1px solid #EEEEEE;
         }
     }
@@ -98,8 +108,8 @@
     @media (min-width: 768px) {
         .holder {
             float: right;
-            padding-right: 2%;
-            padding-left: 9.5vw;
+            padding-right: 3%;
+            padding-left: 5vw;
         }
     }
 

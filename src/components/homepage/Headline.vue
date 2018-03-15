@@ -35,13 +35,14 @@
 <style scoped>
     h2 {
         padding: 40px 3.5%;
+        font-family: "Open Sans";
         font-size: calc(.8em + (2vw));
         line-height: 1.43;
     }
 
     @media (min-width: 768px) {
         h2 {
-            width: 80vw;
+            width: 90vw;
             padding: 80px 0;
         }
     }
