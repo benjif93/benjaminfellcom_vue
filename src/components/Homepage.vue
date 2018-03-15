@@ -3,7 +3,7 @@
     <homepage-headline></homepage-headline>
     <div class="container">
         <div class="row">
-            <div class="employment-and-skills flex ">
+            <div class="employment-and-skills flex flex-wrap">
                 <homepage-employment></homepage-employment>
                 <homepage-skills></homepage-skills>
             </div>
@@ -41,12 +41,21 @@
             }
         }
 
-        &__employment {
-            flex-basis: 60%;
+        &__employment,
+        &__skills { 
+            flex-basis: 100%;
         }
+    }
 
-        &__skills {
-            flex-basis: 40%;
+    @media (min-width: 768px) {
+        .homepage { 
+            &__employment {
+                flex-basis: 60%;
+            }
+
+            &__skills {
+                flex-basis: 40%;
+            }
         }
     }
 

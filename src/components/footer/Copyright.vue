@@ -1,6 +1,12 @@
 <template>
-    <div id="Copyright">
-        <p>© {{ current_year }} • {{ footer_headline }}</p>
+    <div id="Copyright" class="footer__copyright">
+        <div class="container">
+            <div class="row">
+                <div class="holder center-elem">
+                    <p>© {{ current_year }} • {{ footer_headline }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -27,8 +33,23 @@
             }
         },
         created() {
-            this.getCopyright(),
+            this.getCopyright()
             this.getCurrentYear()
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    
+    .holder {
+        padding: 20px 3.5%;
+    }
+
+    @media (min-width: 768px) {
+        .holder {
+            width: 80vw;
+            padding: 20px 0;
+        }
+    }
+
+</style>

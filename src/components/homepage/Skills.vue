@@ -36,8 +36,8 @@
 
 <style lang="scss" scoped>
     .holder {
-        padding-right: 9.5vw;
-        padding-left: 2%;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
     }
 
     ul {
@@ -53,6 +53,13 @@
             text-align: center;
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .holder {
+            padding-right: 9.5vw;
+            padding-left: 2%;
         }
     }
 </style>

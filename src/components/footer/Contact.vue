@@ -1,14 +1,20 @@
 <template>
-  <div id="FooterContact">
-      <h2>{{ section_title }}</h2>
-      <div>
-          <ul>
-              <li v-for='(contact, index) in contact_items' :key='index'>
-                  <span>{{ contact.platform }}:</span> <a :href="contact.link_url">{{ contact.link_text }}</a>
-              </li>
-          </ul>
-      </div>
-  </div>
+    <div id="FooterContact" class="footer__contact">
+        <div class="container">
+            <div class="row">
+                <div class="holder center-elem">
+                    <h2>{{ section_title }}</h2>
+                    <div>
+                        <ul>
+                            <li v-for='(contact, index) in contact_items' :key='index'>
+                                <span>{{ contact.platform }}:</span> <a :href="contact.link_url">{{ contact.link_text }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -35,3 +41,37 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            font-size: 16px;
+        }
+    }
+
+    .footer__contact {
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .holder {
+        padding: 20px 3.5%;
+    }
+
+    @media (min-width: 768px) {
+        .holder {
+            width: 80vw;
+            padding: 20px 0;
+        }
+    }
+
+</style>

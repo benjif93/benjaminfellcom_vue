@@ -96,6 +96,10 @@ export default {
     display: flex;
   }
 
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+
   // List
   ul {
     padding-left: 25px;

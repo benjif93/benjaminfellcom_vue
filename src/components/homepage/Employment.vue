@@ -63,15 +63,14 @@
     }
 
     .holder {
-        float: right;
-        padding-right: 2%;
-        padding-left: 9.5vw;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
     }
 
     .employment-list {
         &__card {
             padding: 17.5px;
-            margin: 5px;
+            margin: 5px 5px 10px;
             background: #ffffff;
             border-radius: 5px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -95,4 +94,13 @@
             border-bottom: 1px solid #EEEEEE;
         }
     }
+
+    @media (min-width: 768px) {
+        .holder {
+            float: right;
+            padding-right: 2%;
+            padding-left: 9.5vw;
+        }
+    }
+
 </style>
